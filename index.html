@@ -4,48 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <button id="darkModeToggle">🌙</button>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-
-    <section id="hero">
-        <img src="profile.jpg" alt="My Profile" class="profile-pic">
-        <h1>Hello, I'm [Your Name]</h1>
-        <p>Software Developer | Tech Enthusiast | Creator</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate software developer with experience in building scalable web applications.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Hello, I'm <span>Your Name</span></h1>
+            <p>Software Developer | Tech Enthusiast | Creator</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">🔗 LinkedIn</a>
+                <a href="#" target="_blank">🐱 GitHub</a>
+                <a href="#" target="_blank">▶️ YouTube</a>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out!</p>
-        <a href="#" class="icon">GitHub</a>
-        <a href="#" class="icon">LinkedIn</a>
-        <a href="#" class="icon">Email</a>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>A brief introduction about yourself.</p>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Some cool stuff I’ve built.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Let's connect!</p>
+        </div>
+    </section>
+
 </body>
 </html>
