@@ -9,23 +9,22 @@
 
 /* Navbar */
 nav {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     position: fixed;
     width: 100%;
-    padding: 15px 0;
+    padding: 15px 20px;
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: background 0.3s ease;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -46,6 +45,55 @@ nav {
 
 .nav-links a:hover {
     color: #00bcd4;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: black;
+    color: white;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    background: #00bcd4;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
 }
 
 /* Hero Section */
@@ -101,11 +149,10 @@ h2 {
     }
 
     .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
+        display: none;
     }
 
-    .nav-links li {
-        margin: 5px 0;
+    .hamburger {
+        display: block;
     }
 }

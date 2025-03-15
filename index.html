@@ -12,15 +12,29 @@
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div class="container">
-            <h1 class="logo">My Portfolio</h1>
+            <h1 class="logo">Your Name</h1>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <div class="close-btn" onclick="toggleMenu()">✖</div>
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -44,6 +58,14 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <p>Your academic background and achievements.</p>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
@@ -57,6 +79,11 @@
         <div class="container">
             <h2>Contact</h2>
             <p>Let's connect!</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">🔗</a>
+                <a href="#" target="_blank">🐱</a>
+                <a href="#" target="_blank">▶️</a>
+            </div>
         </div>
     </section>
 
