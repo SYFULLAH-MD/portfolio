@@ -22,16 +22,11 @@ nav {
     align-items: center;
 }
 
-/* Fix container layout */
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Navbar Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -52,43 +47,19 @@ nav {
     color: #00bcd4;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-}
-
 /* Sidebar */
 #sidebar {
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
-    height: 100vh;
+    height: 100%;
     background: black;
     color: white;
     padding-top: 60px;
-    transition: left 0.3s ease-in-out;
+    transition: 0.3s;
 }
 
-/* Sidebar Overlay */
-#sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 999;
-}
-
-/* Sidebar List */
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -110,21 +81,83 @@ nav {
     background: #00bcd4;
 }
 
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 15px;
     right: 20px;
     font-size: 30px;
     cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
     color: white;
 }
 
-/* Show Sidebar & Hamburger on Mobile */
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../assets/background.jpg') center/cover no-repeat;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    text-decoration: none;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background: #00bcd4;
+    transform: scale(1.1);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .nav-links {
         display: none;
     }
+
     .hamburger {
         display: block;
     }
