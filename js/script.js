@@ -1,8 +1,9 @@
-// Toggle Navbar Dropdown
+// Toggle Sidebar Menu
 function toggleMenu() {
-    let navLinks = document.querySelector(".nav-links");
-    let hamburger = document.querySelector(".hamburger");
-    
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("toggle");
+    let sidebar = document.getElementById("sidebar");
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+    } else {
+        sidebar.style.left = "0px";
+    }
 }
