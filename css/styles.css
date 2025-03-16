@@ -22,19 +22,31 @@ nav {
     align-items: center;
 }
 
-/* Navbar Container */
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: auto;
+    width: 100%;
 }
 
-/* Navbar Logo */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 /* Navbar Links */
@@ -58,93 +70,41 @@ nav {
     color: #00bcd4;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-    color: white;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('../assets/background.jpg') center/cover no-repeat;
-    text-align: center;
-    color: white;
-    flex-direction: column;
-}
-
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-/* Sections */
-.section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-/* Social Icons */
-.social-icons {
-    margin-top: 20px;
-}
-.social-icons a {
-    text-decoration: none;
-    margin: 10px;
-    font-size: 24px;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.social-icons a:hover {
-    background: #00bcd4;
-    transform: scale(1.1);
-}
-
-/* Mobile Dropdown */
+/* Responsive */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .nav-links {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 10px 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-links li {
-        text-align: center;
-        padding: 10px 0;
+        margin: 15px 0;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
     }
 
-    /* Show navbar dropdown when active */
-    .nav-active {
-        display: flex !important;
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Transform the hamburger icon into an "X" when active */
+    .hamburger.toggle .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }

@@ -1,5 +1,8 @@
 // Toggle Navbar Dropdown
 function toggleMenu() {
     let navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("nav-active");
+    let hamburger = document.querySelector(".hamburger");
+    
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("toggle");
 }
